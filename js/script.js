@@ -33,6 +33,11 @@ createApp({
       activeIndex: 0,
     };
   },
+  created() {
+    setInterval(() => {
+      this.showNext();
+    }, 3000);
+  },
   methods: {
     showNext: function () {
       if (this.activeIndex === this.slides.length - 1) {
@@ -47,6 +52,9 @@ createApp({
       } else {
         this.activeIndex--;
       }
+    },
+    thumbClick: function (index) {
+      this.activeIndex = index;
     },
   },
 }).mount("#app");

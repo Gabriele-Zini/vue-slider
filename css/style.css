@@ -55,7 +55,7 @@
     object-fit: cover;
 }
 
-.thumb.active {
+.thumb.active-thumb {
     border: 2px solid #ccc;
     opacity: 1;
 }
