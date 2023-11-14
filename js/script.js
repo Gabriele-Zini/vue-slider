@@ -36,7 +36,7 @@ createApp({
   created() {
     this.autoplayInterval = setInterval(() => {
       this.showNext();
-    }, 3000);
+    }, 1000);
   },
   methods: {
     showNext: function () {
@@ -62,7 +62,7 @@ createApp({
     startAutoplay: function () {
       this.autoplayInterval = setInterval(() => {
         this.showNext();
-      }, 3000);
+      }, 1000);
     },
   },
 }).mount("#app");

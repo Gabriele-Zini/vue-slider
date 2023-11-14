@@ -11,13 +11,16 @@
   <body>
     <div id="app">
       <div class="container">
-        <div class="slider-wrapper" tabindex="0">
+        <div
+          class="slider-wrapper"
+          tabindex="0"
+          @mouseover="stopAutoplay"
+          @mouseout="startAutoplay"
+        >
           <div
             class="item"
             v-for="(element, index) in slides"
             :class="index === activeIndex? 'active': '' "
-            @mouseover="stopAutoplay"
-            @mouseout="startAutoplay"
           >
             <img :src="element.image" alt="element image" />
             <div class="text">
