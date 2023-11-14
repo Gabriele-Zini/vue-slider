@@ -34,7 +34,7 @@ createApp({
     };
   },
   created() {
-    setInterval(() => {
+    this.autoplayInterval = setInterval(() => {
       this.showNext();
     }, 3000);
   },
@@ -55,6 +55,14 @@ createApp({
     },
     thumbClick: function (index) {
       this.activeIndex = index;
+    },
+    stopAutoplay: function () {
+      clearInterval(this.autoplayInterval);
+    },
+    startAutoplay: function () {
+      this.autoplayInterval = setInterval(() => {
+        this.showNext();
+      }, 3000);
     },
   },
 }).mount("#app");

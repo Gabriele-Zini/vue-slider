@@ -16,6 +16,8 @@
             class="item"
             v-for="(element, index) in slides"
             :class="index === activeIndex? 'active': '' "
+            @mouseover="stopAutoplay"
+            @mouseout="startAutoplay"
           >
             <img :src="element.image" alt="element image" />
             <div class="text">
