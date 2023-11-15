@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Slider</title>
     <link rel="stylesheet" href="./css/style.css" />
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
   </head>
 
   <body>
@@ -35,7 +36,6 @@
             <div
               v-for="(element, index) in slides"
               class="thumb"
-              v-for="(element, index) in slides"
               :class="index === activeIndex? 'active-thumb': '' "
               @click="thumbClick(index)"
             >
@@ -46,7 +46,7 @@
       </div>
     </div>
 
-    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+  
     <script src="./js/script.js"></script>
   </body>
 </html>
