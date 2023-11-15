@@ -31,6 +31,7 @@ createApp({
         },
       ],
       activeIndex: 0,
+      autoplayInterval: null,
     };
   },
   created() {
